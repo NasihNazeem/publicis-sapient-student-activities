@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.item1 {
+   grid-area: top; 
+   height: 50px;
+  }
+.item2 { 
+  grid-area: left; 
+  height: 200px;
+}
+.item3 { grid-area: middle; }
+.item4 { grid-area: right; }
+.item5 {
+   grid-area: bottom; 
+   height: 50px;
+  }
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'top top top top top top'
+    'left middle middle middle middle right'
+    'bottom bottom bottom bottom bottom bottom';
+  gap: 10px;
+  background-color: white;
+  padding: 10px;
+}
+
+.grid-container > div {
+  background-color: rgba(255, 255, 255);
+  border: 8px solid red;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+}
+</style>
+</head>
+<body>
+
+
+
+<div class="grid-container">
+  <div class="item1"></div>
+  <div class="item2"></div>
+  <div class="item3"></div>  
+  <div class="item4"></div>
+  <div class="item5"></div>
+</div>
+
+</body>
+</html>
+
+
