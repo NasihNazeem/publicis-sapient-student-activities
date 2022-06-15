@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Validation form</h2>
+    <form action="https://www.google.ca/" name = 'login' method = "post" onsubmit = "return handleSubmit()">
+        <table>
+            <tr>
+                <td>First Name</td>
+                <td><input type = "text" placeholder = "First Name"
+                    name = "fn" autocomplete="off" /></td>
+            </tr>
+
+            <tr>
+                <td>Last Name</td>
+                <td><input type = "text" placeholder = "Last Name"
+                    name = "ln" autocomplete="off" /></td>
+            </tr>
+
+            <tr>
+                <td>Password</td>
+                <td><input type = "password" placeholder="Please enter your password"
+                    name = "pass" autocomplete="off" /></td>
+            </tr>
+
+            <tr>
+                <td>Confirm Password</td>
+                <td><input type = "password" placeholder="Confirm password"
+                    name = "cpass" autocomplete="off" /></td>
+            </tr>
+
+            <tr>
+                <td>Gender</td>
+                <td><input type = "radio" value = 'M' name = "gender"> Male
+                    <input type = "radio" value = "F" name = "gender"> Female <br></td>
+            </tr>
+
+            <tr>
+                <td>Skills</td>
+                <td><input type = "checkbox" name = "skill1">C
+                    <input type = "checkbox" name = "skill2">Java
+                    <input type = "checkbox" name = "skill3">C++<br>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td></td>
+                <td><button type = "submit" name = "register">Register</button></td>
+            </tr>
+        </table>
+    </form>
+
+    <script type = "text/javascript">
+        function handleSubmit(){
+            let loginForm = document.login;
+            if(login.fn.value.length < 3){
+                alert('First name is too short or empty.');
+                return false;
+            } else if(login.ln.value.length < 2){
+                alert('Last name is too short or empty');
+                return false;
+            }else if(login.gender.value == ''){
+                alert('Gender not selected.');
+                return false;
+            }else if(login.pass.value != login.cpass.value){
+                alert('Passwords do not match.');
+                return false;
+            }else if(login.skill1.checked == false && login.skill2.checked == false && login.skill3.checked == false){
+                alert('Select a skill.');
+                return false;
+            } else if(pass.value.length == 0){
+                alert('Password is empty');
+                return false;
+            }
+
+            
+        }
+    </script>
+</body>
+</html>
