@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Demo for Javascript</h1>
+    <script type = "text/javascript">
+        // literal style object
+        let user = {name: "Alexander", age: 35};
+        document.write('<p>Name = ' + user.name + ', Age = ' + user.age + '</p>');
+
+        //function style object
+        function Person(name, age){
+            //this is used to declare properties for Person object
+            this.name = name;
+            this.age = age;
+            
+            //this.name & this.age declares properties which are initalized by 2 params
+
+        }
+
+        let user2 = new Person('Bruce', 20);
+        document.write('<p>Name = ' + user2.name + ', Age = ' + user2.age + '</p>');
+    </script>
+</body>
+</html>
