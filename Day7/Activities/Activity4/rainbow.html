@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="c1" style="border: 2px solid black;" width="400" height="400"></canvas>
+    <script type="text/javascript">
+        let rainbowArray = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'purple', 'white'];
+        let ctx = document.getElementById("c1").getContext('2d');
+
+        for(i = 0; i < rainbowArray.length; i++){
+            ctx.fillStyle = rainbowArray[i];
+            ctx.beginPath();
+            ctx.arc(200,400, 200 - (20*i), 0, Math.PI, true);
+            ctx.fill();
+        }
+    </script>
+</body>
+</html>
