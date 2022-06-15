@@ -5,20 +5,34 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .smallImages{
+            width: 200px;
+            height: 200px;
+            margin: 20px;
+            border: 10px solid black;
+        }
+    </style>
 </head>
 <body>
-    <h1>Demo for Javascript</h1>
-    <script type = "text/javascript">
-        let items = [
-            {name: "Jack", age: 35},
-            {name: "Alex", age: 55},
-            {name: "Nasih", age: 20}
-        ];
-
-        for(i = 0; i < items.length; i++){
-            document.write('<p>Person ' + (i+1) + ': Name: ' + items[i].name + ' Age: ' + items[i].age + '</p>');
-
+    <h1>Event Handling in Javascript</h1>
+    <img src="https://images.pexels.com/photos/1097456/pexels-photo-1097456.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Not found." width="400" height="400" id = "main" />
+    
+    
+    <div onclick="changeImages(event)" style = 'border: 2px solid black;'>
+        <img src="https://images.pexels.com/photos/1766838/pexels-photo-1766838.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Not found." class = "smallImages">
+        <img src="https://images.pexels.com/photos/1097456/pexels-photo-1097456.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Not found." class="smallImages">
+        <img src="https://images.pexels.com/photos/1933239/pexels-photo-1933239.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Not found." class="smallImages">
+        <img src="https://images.pexels.com/photos/1519088/pexels-photo-1519088.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Not found." class="smallImages"> 
+        <img src="https://images.pexels.com/photos/313782/pexels-photo-313782.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Not found." class="smallImages">
+    </div>
+    <script type="text/javascript">
+        function changeImages(e){
+            let mainImage = document.getElementById("main");
+            let target = e.target;
+            
         }
     </script>
+
 </body>
 </html>
