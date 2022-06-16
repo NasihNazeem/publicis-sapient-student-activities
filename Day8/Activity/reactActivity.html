@@ -19,31 +19,31 @@
     <script type = "text/babel">
 
         function UserList(){
-            let list = [{name: "Alex", age: 30, gender: "Male"}, {name: "Bruce", age: 20, gender: "Female"}];
+                    let list = [{name: "Alex", age: 30, gender: "Male"}, {name: "Bruce", age: 20, gender: "Female"}];
 
-            return( <div>
-                    {
-                        <table>
-                            <tr>
-                                <td><b>Name</b></td>
-                                <td><b>Age</b></td>
-                                <td><b>Gender</b></td>
-                            </tr>    
-
-                            
+                    return( <div>
                             {
-                                list.map(items => <tr>
-                                    <td>{items.name}</td>
-                                    <td>{items.age}</td>
-                                    <td>{items.gender}</td>
-                                    </tr>)
+                                <table>
+                                    <tr>
+                                        <td><b>Name</b></td>
+                                        <td><b>Age</b></td>
+                                        <td><b>Gender</b></td>
+                                    </tr>    
+
+                                    
+                                    {
+                                        list.map(items => <tr>
+                                            <td>{items.name}</td>
+                                            <td>{items.age}</td>
+                                            <td>{items.gender}</td>
+                                            </tr>)
+                                    }
+                                    
+                                </table>
                             }
-                            
-                        </table>
-                    }
-                </div>
-            );
-        }
+                        </div>
+                    );
+                }
 
         function User(){
             let name = "Ajay";
