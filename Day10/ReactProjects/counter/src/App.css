@@ -1,0 +1,22 @@
+*, *::before, *::after{
+  box-sizing: border-box;
+}
+
+body{
+  background:linear-gradient(to right, #03045e,#caf0f8);
+}
+
+.calculator-grid{
+  display:grid;
+  grid-template-columns: repeat(4,6rem);
+  grid-template-rows: minmax(5,auto) repeat(5,6rem);
+  margin-top: 2rem;
+  justify-content: center;
+}
+
+.output{
+  display:flex;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.75);
+    
+}
