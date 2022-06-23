@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.example.springbootdbapp.exceptions.ProfileNotFoundException;
 import com.example.springbootdbapp.model.beans.Profile;
 import com.example.springbootdbapp.model.dao.ProfileRepository;
 
@@ -26,6 +27,16 @@ public class ProfileServiceImpl implements ProfileService{
     public List<Profile> fetchProfiles() {
         List<Profile> list = profileDao.findAll();
         return list;
+    }
+
+    @Override
+    public Profile fetchProfile(int id) throws ProfileNotFoundException {
+        Profile profile = profileDao.findById(id).orElse(null);
+
+        if(profile == null){
+            throw new ProfileNotFoundException("Profile with an id: " + id + " is not found!");
+        }
+        return profile;
     }
     
 }
