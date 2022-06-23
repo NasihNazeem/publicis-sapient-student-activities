@@ -17,4 +17,6 @@ public interface ProfileService {
 
     // This returns a profile with respectice id OR throw ProfileNotFoundExcpetion
     public Profile fetchProfile(int id) throws ProfileNotFoundException;
+
+    public Profile updateProfile(int id, Profile updated) throws ProfileNotFoundException;
 }

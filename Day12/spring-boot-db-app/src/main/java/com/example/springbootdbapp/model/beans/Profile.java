@@ -1,11 +1,16 @@
 package com.example.springbootdbapp.model.beans;
 
 import java.time.LocalDate;
+import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
 
 @Entity
 public class Profile {
@@ -17,6 +22,9 @@ public class Profile {
     private long phone;
     private LocalDate dob;
 
+    @OneToMany(cascade =  CascadeType.ALL, fetch = FetchType.EAGER)
+    @JoinColumn(name = "profileidref")
+    private List<Friend> friends;
     
 
     /**
@@ -73,6 +81,21 @@ public class Profile {
      */
     public void setDob(LocalDate dob) {
         this.dob = dob;
+    }
+
+
+    /**
+     * @return List<Friend> return the friends
+     */
+    public List<Friend> getFriends() {
+        return friends;
+    }
+
+    /**
+     * @param friends the friends to set
+     */
+    public void setFriends(List<Friend> friends) {
+        this.friends = friends;
     }
 
 }
